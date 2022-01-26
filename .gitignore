@@ -1,6 +1,7 @@
 
 #Folder
 /Manga
+*.pdf
 
 # Logs
 logs
