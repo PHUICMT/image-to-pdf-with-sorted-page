@@ -28,8 +28,11 @@ function mergePageToPDF(session_path, session_folder) {
     doc.pipe(fs.createWriteStream(output_path + fileName));
     sorted_file_list.map((image) => {
       try {
+        let img = doc.openImage(folder_path + image);
+
         console.log("Merged : " + fileName + " <-- " + image);
-        doc.addPage().image(folder_path + image);
+        doc.addPage({ size: [img.width, img.height] });
+        doc.image(img, 0, 0);
       } catch (e) {
         console.log("ERROR FILE : " + folder_path + image);
       }
