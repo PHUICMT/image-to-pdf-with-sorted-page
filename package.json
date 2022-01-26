@@ -6,8 +6,15 @@
   "license": "MIT",
   "devDependencies": {},
   "scripts": {
+    "start:dev": "nodemon pdf-gen.js",
+    "start": "node pdf-gen.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "nodemon": "^2.0.15",
+    "pdfkit": "^0.13.0",
+    "string-natural-compare": "^3.0.1"
+  }
 }
